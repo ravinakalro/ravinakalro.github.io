@@ -394,7 +394,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h3 class="heading text-capitalize text-white text-center"> Contact </h3>
 <!-- 		   <p class="subs mt-4 text-center">You can contact me.</p> -->
 			<div class="contact_grid_right mt-5 mx-auto text-center">
-				<form action="#" method="post">
+				<form 
+					action="https://formspree.io/f/xoqyydbq"
+					method="post"
+				>
 					<div class="row contact_top">
 						<div class="col-sm-6">
 							<input type="text" name="Name" placeholder="Name" required="">
@@ -405,10 +408,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>	
 						<input type="text" name="Name" placeholder="Name" required="">
 						<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-						<input type="submit" value="Send Message">
+						<input type="submit" value="Submit">
 						<input type="reset" value="Clear Form">
 						<div class="clearfix"> </div>
 				</form>
+				<script>
+					var form = document.getElementById("my-form");
+					
+					async function handleSubmit(event) {
+					  event.preventDefault();
+					  var status = document.getElementById("my-form-status");
+					  var data = new FormData(event.target);
+					  fetch(event.target.action, {
+						method: form.method,
+						body: data,
+						headers: {
+							'Accept': 'application/json'
+						}
+					  }).then(response => {
+						status.innerHTML = "Thanks for your submission!";
+						form.reset()
+					  }).catch(error => {
+						status.innerHTML = "Oops! There was a problem submitting your form"
+					  });
+					}
+					form.addEventListener("submit", handleSubmit)
+				</script>
 			</div>
 			<div class="cpy-right text-center">
 			<div class="follow">

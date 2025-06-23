@@ -1,127 +1,149 @@
-/* --- General Body and Container --- */
+/* Universal Box Sizing for consistent layout */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7; /* Increased for better readability */
     color: #333;
     background-color: #f4f7f6;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased; /* Smoother fonts on WebKit browsers */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-/* Ensure the main container truly limits width and centers content */
+/* Container for consistent spacing */
 .container {
-    max-width: 1200px; /* Keep your max-width */
-    margin: 0 auto;    /* Ensure container itself is centered */
-    padding: 0 20px;   /* Add some internal padding */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px; /* Slightly increased horizontal padding */
 }
 
-/* --- Headings (Already good, but including for completeness) --- */
+/* Headings */
 h1, h2, h3, h4 {
-    font-weight: 600;
+    font-weight: 700; /* Bolder headings */
     color: #2c3e50;
     margin-bottom: 20px;
-    text-align: center; /* Ensure all main headings are centered */
+    text-align: center;
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 3.8em; /* Slightly larger main heading */
+    line-height: 1.2;
 }
 
 h1 span {
-    color: #007bff; /* A vibrant blue for emphasis */
+    color: #007bff; /* Vibrant blue accent */
 }
 
 h2 {
-    font-size: 2.8em;
+    font-size: 3em; /* Larger section titles */
     position: relative;
     padding-bottom: 15px;
+    margin-top: 0; /* Ensure no default top margin push from sections */
 }
 
 h2::after {
     content: '';
-    width: 80px;
-    height: 4px;
+    width: 90px; /* Slightly wider underline */
+    height: 5px; /* Thicker underline */
     background-color: #007bff;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 h3 {
     font-size: 2.5em;
     position: relative;
     padding-bottom: 15px;
+    margin-top: 0;
 }
 
 h3::after {
     content: '';
-    width: 80px;
-    height: 4px;
+    width: 90px;
+    height: 5px;
     background-color: #007bff;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.6em; /* Slightly larger sub-headings */
+    font-weight: 600;
 }
 
-/* --- Paragraphs --- */
+/* Paragraphs */
 p {
     margin-bottom: 15px;
     color: #555;
+    font-size: 1.05em; /* Slightly larger body text */
 }
 
 p.subs {
-    font-size: 1.1em;
+    font-size: 1.15em; /* Slightly larger and more prominent sub-text */
     color: #777;
     margin-bottom: 50px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center; /* Ensure introductory paragraphs are centered */
+    text-align: center;
 }
 
-/* --- Buttons --- */
+/* Buttons */
 .banner-button, .btn {
     display: inline-block;
     background-color: #007bff;
     color: #fff;
-    padding: 12px 25px;
-    border-radius: 5px;
+    padding: 14px 30px; /* Larger padding for a more substantial button */
+    border-radius: 8px; /* More rounded corners */
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px; /* Increased letter spacing */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Subtle initial shadow */
 }
 
 .banner-button:hover, .btn:hover {
     background-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px); /* More pronounced lift effect */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25); /* Stronger shadow on hover */
 }
 
-/* --- Sections --- */
+/* Centering container for buttons - NEW */
+.button-container {
+    text-align: center;
+    margin-top: 40px; /* Increased space above the button */
+    margin-bottom: 20px; /* Space below the button */
+}
+
+/* Sections */
 section {
-    padding: 80px 0;
+    padding: 100px 0; /* More vertical padding between sections */
+    overflow: hidden; /* Clear floats and prevent content overflow */
 }
 
-/* --- Header & Navigation (Already good) --- */
+/* Header & Navigation */
 .main-top header {
     background-color: #fff;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Slightly more prominent shadow */
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0; /* Ensure it spans full width */
     z-index: 1000;
 }
 
@@ -139,16 +161,17 @@ section {
 }
 
 .mnu ul li {
-    margin: 0 15px;
+    margin: 0 20px; /* Increased spacing between nav items */
 }
 
 .mnu ul li a {
     text-decoration: none;
     color: #555;
-    font-weight: 500;
+    font-weight: 600; /* Bolder nav links */
     transition: color 0.3s ease;
-    padding: 5px 0;
+    padding: 10px 0; /* More clickable area */
     position: relative;
+    font-size: 1.05em;
 }
 
 .mnu ul li a::after {
@@ -157,7 +180,7 @@ section {
     left: 0;
     bottom: 0;
     width: 0;
-    height: 2px;
+    height: 3px; /* Thicker underline */
     background-color: #007bff;
     transition: width 0.3s ease;
 }
@@ -170,8 +193,9 @@ section {
 .mnu .toggle {
     display: none;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 28px; /* Larger toggle icon */
     color: #333;
+    padding-right: 25px; /* Match container padding */
 }
 
 #drop {
@@ -180,6 +204,9 @@ section {
 
 /* Responsive Navigation */
 @media (max-width: 991px) {
+    .mnu {
+        justify-content: flex-end; /* Align toggle to the right */
+    }
     .mnu ul {
         display: none;
         flex-direction: column;
@@ -189,6 +216,8 @@ section {
         top: 70px; /* Adjust based on header height */
         left: 0;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .mnu ul li {
@@ -201,16 +230,16 @@ section {
     }
 
     .mnu ul li a {
-        padding: 15px 20px;
+        padding: 15px 25px; /* Match container padding */
         display: block;
-        text-align: center; /* Center menu items on mobile */
+        text-align: center;
     }
 
     .mnu .toggle {
         display: block;
-        text-align: right;
-        width: 100%;
-        padding-right: 20px;
+        /* text-align: right; -- handled by justify-content: flex-end on .mnu */
+        width: auto;
+        margin-right: 0; /* Reset margin */
     }
 
     #drop:checked + .menu {
@@ -218,118 +247,106 @@ section {
     }
 }
 
-/* --- Banner Section --- */
+/* Banner Section (Home) */
 .banner-bottom {
-    padding-top: 120px; /* To accommodate fixed header */
-    padding-bottom: 80px;
+    padding-top: 150px; /* More space from top for visual impact */
+    padding-bottom: 100px;
     background: linear-gradient(to right, #e0f2f7, #f4f7f6);
-    min-height: 100vh;
+    min-height: 90vh; /* Ensures it takes a good portion of the viewport height */
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1; /* Ensure content is above any potential background elements */
 }
 
-.inner-sec {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
+/* Profile Image Styling - UPDATED to Square/Rounded Corners */
+.advantage_left1 img {
+    border-radius: 12px; /* Nicely rounded corners */
+    width: 280px; /* Slightly larger image */
+    height: 280px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image fills without distortion */
+    border: 6px solid #007bff; /* Thicker, more prominent border */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25); /* Stronger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.middle-grids {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.advantage_left1 img:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35); /* Even stronger shadow */
 }
 
+/* Banner text and profile layout */
 .advantage-grid-info1 {
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
-    margin-bottom: 40px; /* Spacing below image on small screens */
+    margin-bottom: 60px; /* Increased space below image on small screens */
 }
-
-/* Profile Image Styling - ADJUSTED for square/rectangle */
-.advantage_left1 img {
-    /* Removed border-radius: 50%; for square/rectangle */
-    width: 250px;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
-    border: 5px solid #007bff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    /* Optional: If you want slightly rounded corners, uncomment below and adjust value */
-    /* border-radius: 10px; */
-}
-
 
 .advantage-grid-info {
     flex: 0 0 100%;
     max-width: 100%;
-    text-align: center; /* Keep text centered on smaller screens */
-    padding: 0;
+    text-align: center;
+    padding: 0; /* Remove extra padding */
 }
 
 .advantage_left h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    text-align: center; /* Ensure h1 is centered */
+    font-size: 3.8em;
+    margin-bottom: 25px;
+    line-height: 1.2;
 }
 
 .advantage_left p {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 30px auto; /* Center paragraph and add bottom margin */
-    text-align: center; /* Ensure paragraphs are centered */
+    font-size: 1.15em; /* Slightly larger and more readable */
+    max-width: 900px; /* Allow text to span wider */
+    margin: 0 auto 30px auto;
+    text-align: center;
 }
 
-/* Removed the waving hand icon CSS as it's removed from HTML */
-/* .waving {
-    height: 60px;
-    margin-bottom: 10px;
-} */
+/* About Section & General Content Blocks */
+.about, .cert, .news, .projects {
+    background-color: #fff; /* Ensure these sections have a white background */
+    padding: 100px 0;
+}
 
+.cert {
+    background-color: #f8fbfd; /* Slightly different background for Certifications */
+}
 
-/* --- About, Certifications, and Experience Item Styling --- */
-/* This rule is crucial for centering the content blocks */
-.aboutgrid_tp,
-.certigrid_tp,
-.newsgrid_tp {
+/* Common styling for content cards/blocks */
+.aboutgrid_tp, .certigrid_tp, .newsgrid_tp {
     background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    text-align: left; /* Content within these blocks should align left */
-    margin-bottom: 30px;
+    padding: 50px; /* More internal padding for content */
+    border-radius: 12px; /* Consistent rounded corners */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Refined shadow */
+    text-align: left;
+    margin-bottom: 40px; /* More space between blocks */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    /* This centers the blocks within their parent columns */
-    max-width: 900px; /* Limit width */
+    max-width: 900px; /* Limit width to keep content readable */
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #e0e6ea; /* Subtle border */
 }
 
-.aboutgrid_tp:hover,
-.certigrid_tp:hover,
-.newsgrid_tp:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+.aboutgrid_tp:hover, .certigrid_tp:hover, .newsgrid_tp:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* Stronger shadow on hover */
 }
 
+/* List styling within content blocks */
 .about_bt ul, .cert_bt ul, .news_bt ul {
     list-style: none;
     padding-left: 0;
-    margin-top: 20px;
-    text-align: left; /* Ensure lists stay left-aligned within their blocks */
+    margin-top: 25px; /* More space above lists */
+    text-align: left;
 }
 
 .about_bt ul li, .cert_bt ul li, .news_bt ul li {
-    margin-bottom: 10px;
+    margin-bottom: 12px; /* More space between list items */
     position: relative;
-    padding-left: 25px;
-    font-size: 1em;
-    color: #555;
+    padding-left: 30px; /* Increased padding for icon */
+    font-size: 1.05em;
+    color: #444;
 }
 
 .about_bt ul li::before, .cert_bt ul li::before, .news_bt ul li::before {
@@ -339,117 +356,169 @@ section {
     color: #007bff;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 2px; /* Adjust vertical alignment of icon */
+    font-size: 0.9em; /* Slightly smaller icon size */
 }
 
-.news_bt h4 {
-    font-size: 1.8em;
-    margin-bottom: 5px;
-    color: #2c3e50;
-}
-
-.news_bt h5 {
-    font-size: 1.2em;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.newsgrid_tp img {
-    max-width: 120px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    display: block; /* Ensure image is a block element to align with margin auto */
-    margin-left: auto; /* Center company logos */
-    margin-right: auto;
-}
-
-/* --- Skills Section --- */
+/* Skills Section */
 .agileits-services {
-    background-color: #fff;
-    text-align: center; /* Ensure section content is centered */
+    background-color: #f4f7f6; /* Consistent with body background */
+    padding: 100px 0;
 }
 
 .agileits-services-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* This is key for centering the skill cards */
-    max-width: 1200px; /* Optional: if you want to limit the width of the row itself */
-    margin: 0 auto; /* Center the entire row of skill cards */
-    padding: 20px 0; /* Add some vertical padding to the row */
+    justify-content: center; /* Crucial for centering the skill cards */
+    max-width: 1200px; /* Ensures the row doesn't exceed content width */
+    margin: 0 auto; /* Centers the entire row of skill cards */
+    padding-top: 40px; /* Space from subheading */
+    padding-bottom: 20px; /* Space before button */
 }
 
 .agileits-services-grids {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 15px; /* Reduced margin slightly to potentially fit more */
-    box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+    background-color: #fff;
+    padding: 35px; /* More internal padding */
+    border-radius: 12px;
+    margin: 15px; /* Consistent margin between cards */
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07); /* Softer shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 0 calc(33.33% - 30px); /* Adjusted for 30px total margin (15px left + 15px right) */
-    max-width: calc(33.33% - 30px); /* Adjusted for 30px total margin */
+    flex: 0 0 calc(33.33% - 30px); /* Calculate for 3 columns with 15px margin on each side (30px total per card) */
+    max-width: calc(33.33% - 30px);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border: 1px solid #e0e6ea; /* Subtle border */
 }
 
 .agileits-services-grids:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-.agileits-services-grids .fa, .agileits-services-grids .fas {
-    font-size: 3.5em;
+.agileits-services-grids .fas, .agileits-services-grids .fa { /* Use .fas for Font Awesome 5 Solid */
+    font-size: 4em; /* Larger icons */
+    color: #007bff;
+    margin-bottom: 25px; /* More space below icon */
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.agileits-services-grids:hover .fas, .agileits-services-grids:hover .fa {
+    transform: translateY(-5px); /* Slight lift for icon on card hover */
+}
+
+
+.agileits-services-grids h4 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    line-height: 1.3;
+}
+
+.agileits-services-grids p {
+    color: #666;
+    font-size: 0.98em; /* Slightly adjusted text size */
+    text-align: center;
+}
+
+/* Professional Experience Section (News) */
+.newsgrid_tp img {
+    max-width: 140px; /* Consistent logo size */
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 8px; /* Consistent rounded corners */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center company logos */
+    filter: grayscale(80%); /* Subtle grayscale for logos */
+    transition: filter 0.3s ease;
+}
+
+.newsgrid_tp img:hover {
+    filter: grayscale(0%); /* Color on hover */
+}
+
+.news_bt h4 {
+    font-size: 1.9em; /* Larger company names */
+    margin-bottom: 8px;
+    color: #2c3e50;
+    text-align: center; /* Center company names */
+}
+
+.news_bt h5 {
+    font-size: 1.3em; /* Larger role/duration */
     color: #007bff;
     margin-bottom: 20px;
+    text-align: center; /* Center role/duration */
+    font-weight: 600;
 }
 
-/* --- Contact Section --- */
+
+/* Contact Section */
 .wedo {
-    background: #2c3e50; /* Darker background for contrast */
+    background: linear-gradient(to bottom right, #2c3e50, #1a2a3a); /* Dark gradient background */
     color: #fff;
-    padding-bottom: 40px; /* Adjust for footer */
+    padding-bottom: 60px; /* Adjusted for footer */
 }
 
 .wedo .heading {
     color: #fff;
 }
 
+.wedo .subs {
+    color: rgba(255,255,255,0.8); /* Lighter text for contrast */
+}
+
 /* Calendly Widget styling */
 .calendly-inline-widget {
-    margin: 50px auto; /* Center the widget */
-    border-radius: 10px;
+    margin: 60px auto; /* More space around widget */
+    border-radius: 15px; /* More rounded widget corners */
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    max-width: 800px; /* Limit the width of the widget */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Stronger shadow */
+    max-width: 900px; /* Allow widget to be wider */
 }
 
 .contact_grid_right {
-    max-width: 700px;
-    margin: 0 auto; /* Center the contact form */
-    padding: 40px;
+    max-width: 750px; /* Slightly wider form */
+    margin: 0 auto;
+    padding: 50px; /* More internal padding */
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     text-align: center;
+}
+
+.contact_grid_right h4 {
+    color: #2c3e50;
+    font-size: 1.8em; /* Larger form heading */
 }
 
 .contact_top input[type="text"],
 .contact_top input[type="email"],
 .contact_grid_right textarea {
     width: calc(100% - 24px); /* Account for padding and border */
-    padding: 12px;
-    margin-bottom: 20px;
+    padding: 15px; /* Larger input fields */
+    margin-bottom: 25px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px; /* Rounded input fields */
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact_top input[type="text"]:focus,
+.contact_top input[type="email"]:focus,
+.contact_grid_right textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.25); /* Focus ring */
+    outline: none;
 }
 
 .contact_grid_right textarea {
-    min-height: 120px;
+    min-height: 150px; /* Taller textarea */
     resize: vertical;
 }
 
@@ -457,97 +526,92 @@ section {
 .contact_grid_right input[type="reset"] {
     background-color: #007bff;
     color: #fff;
-    padding: 12px 30px;
+    padding: 15px 35px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .contact_grid_right input[type="reset"] {
     background-color: #6c757d;
-    margin-left: 15px;
+    margin-left: 20px; /* More space from submit button */
 }
 
 .contact_grid_right input[type="submit"]:hover {
     background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 .contact_grid_right input[type="reset"]:hover {
     background-color: #5a6268;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
 #my-form-status {
-    margin-top: 20px;
+    margin-top: 25px; /* More space for status message */
     font-size: 1.1em;
-    color: green; /* Default success color */
+    font-weight: 500;
 }
 
-/* --- Footer --- */
+/* Footer */
 .cpy-right {
-    margin-top: 60px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 80px; /* More space from contact form */
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.15); /* Slightly thicker border */
     color: rgba(255,255,255,0.7);
 }
 
 .cpy-right .follow ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 25px 0; /* More space around social icons */
     display: flex;
     justify-content: center;
 }
 
 .cpy-right .follow ul li {
-    margin: 0 10px;
+    margin: 0 15px; /* More space between social icons */
 }
 
 .cpy-right .follow ul li a {
     color: #fff;
-    font-size: 1.8em;
+    font-size: 2em; /* Larger social icons */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .cpy-right .follow ul li a:hover {
     color: #007bff;
-    transform: translateY(-3px);
+    transform: translateY(-4px); /* More pronounced lift */
 }
 
 .cpy-right p {
-    font-size: 0.9em;
-    color: rgba(255,255,255,0.6);
+    font-size: 0.95em;
+    color: rgba(255,255,255,0.65);
 }
 
-/* --- Media Queries for Responsiveness --- */
-@media (min-width: 768px) {
+/* Media Queries for responsiveness */
+@media (min-width: 992px) { /* Changed from 768px to 992px for typical desktop */
     .advantage-grid-info1 {
         flex: 0 0 33.33%;
         max-width: 33.33%;
-        margin-bottom: 0; /* Remove bottom margin on larger screens */
+        margin-bottom: 0; /* No bottom margin on large screens */
     }
     .advantage-grid-info {
         flex: 0 0 66.66%;
         max-width: 66.66%;
-        text-align: left; /* Align text left on larger screens */
+        text-align: left; /* Align text left when beside image */
         padding-left: 40px;
     }
     .advantage_left h1,
     .advantage_left p {
         text-align: left; /* Ensure text aligns left when col is wider */
-    }
-
-    /* Buttons below About section, Certifications section, and Skills section */
-    /* Add text-align: center to the parent container of the buttons */
-    .about .container,
-    .cert .container,
-    .agileits-services .container,
-    .news .container,
-    .projects .container {
-        text-align: center; /* This will center the buttons at the bottom of these sections */
     }
 
     .agileits-services-grids {
@@ -557,59 +621,75 @@ section {
     .contact_top .col-sm-6 {
         flex: 0 0 50%;
         max-width: 50%;
-        padding: 0 10px;
+        padding: 0 15px; /* Adjusted padding for form columns */
     }
     .contact_top {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -10px;
+        margin: 0 -15px; /* Adjusted margin for form columns */
     }
     .contact_top input {
-        width: calc(100% - 20px); /* Adjust for column padding */
+        width: calc(100% - 30px); /* Adjust for column padding */
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) { /* Tablets and smaller */
+    h1 {
+        font-size: 3em;
+    }
+    h2, h3 {
+        font-size: 2.2em;
+    }
+    section {
+        padding: 80px 0; /* Less padding on smaller screens */
+    }
+    .banner-bottom {
+        padding-top: 120px;
+        min-height: auto; /* Allow height to adjust */
+    }
+    .advantage_left p {
+        font-size: 1.05em;
+    }
+    .agileits-services-grids {
+        flex: 0 0 calc(50% - 30px); /* Two columns on tablets */
+        max-width: calc(50% - 30px);
+    }
+    .contact_grid_right input[type="submit"],
+    .contact_grid_right input[type="reset"] {
+        width: 100%;
+        margin: 10px 0 0; /* Stack buttons on smaller screens */
+    }
+    .contact_grid_right input[type="reset"] {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767px) { /* Mobile phones */
     h1 {
         font-size: 2.5em;
     }
     h2, h3 {
-        font-size: 2em;
-    }
-    section {
-        padding: 60px 0;
-    }
-    .banner-bottom {
-        padding-top: 100px;
-    }
-    .advantage_left p {
-        font-size: 1em;
+        font-size: 1.8em;
     }
     .agileits-services-grids {
-        flex: 0 0 calc(100% - 40px); /* One column on small screens */
+        flex: 0 0 calc(100% - 40px); /* One column on mobile */
         max-width: calc(100% - 40px);
+        margin: 20px auto; /* Center single column cards */
+    }
+    .advantage_left1 img {
+        width: 200px; /* Smaller profile image on mobile */
+        height: 200px;
+    }
+    .contact_grid_right {
+        padding: 30px;
     }
     .contact_top .col-sm-6 {
         flex: 0 0 100%;
         max-width: 100%;
         padding: 0;
     }
-    .contact_grid_right input[type="submit"],
-    .contact_grid_right input[type="reset"] {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .contact_grid_right input[type="reset"] {
-        margin-left: 0;
-    }
-
-    /* Ensure full width blocks are centered on small screens too */
-    .aboutgrid_tp,
-    .certigrid_tp,
-    .newsgrid_tp {
-        padding: 20px; /* Slightly less padding on mobile */
-        margin-left: 15px; /* Add side margins for smaller screens */
-        margin-right: 15px;
-        max-width: calc(100% - 30px); /* Adjust max-width for mobile */
+    .contact_top input[type="text"],
+    .contact_top input[type="email"] {
+        width: 100%; /* Full width for single column inputs */
     }
 }

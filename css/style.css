@@ -1,4 +1,4 @@
-/* General Body Styling */
+/* --- General Body and Container --- */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -7,17 +7,20 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Ensure the main container truly limits width and centers content */
 .container {
     max-width: 1200px; /* Keep your max-width */
     margin: 0 auto;    /* Ensure container itself is centered */
     padding: 0 20px;   /* Add some internal padding */
 }
-/* Headings */
+
+/* --- Headings (Already good, but including for completeness) --- */
 h1, h2, h3, h4 {
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 20px;
+    text-align: center; /* Ensure all main headings are centered */
 }
 
 h1 {
@@ -30,7 +33,6 @@ h1 span {
 
 h2 {
     font-size: 2.8em;
-    text-align: center;
     position: relative;
     padding-bottom: 15px;
 }
@@ -49,7 +51,6 @@ h2::after {
 
 h3 {
     font-size: 2.5em;
-    text-align: center;
     position: relative;
     padding-bottom: 15px;
 }
@@ -70,7 +71,7 @@ h4 {
     font-size: 1.5em;
 }
 
-/* Paragraphs */
+/* --- Paragraphs --- */
 p {
     margin-bottom: 15px;
     color: #555;
@@ -83,31 +84,10 @@ p.subs {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-}
-.profile-image-wrapper {
-    width: 260px; /* Slightly larger than the image to accommodate the border */
-    height: 260px; /* Adjust as needed */
-    margin: 0 auto 20px auto; /* Center the wrapper */
-    /* Add your desired border style here */
-    border: 5px solid #007bff;
-    /* Example of a slightly rounded border shape */
-    border-radius: 15px;
-    overflow: hidden; /* Clips the image to the wrapper's shape */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    display: flex; /* To center the image inside */
-    justify-content: center;
-    align-items: center;
+    text-align: center; /* Ensure introductory paragraphs are centered */
 }
 
-.profile-image-wrapper img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio within the wrapper */
-    display: block; /* To avoid extra spacing below the image */
-    border-radius: 0; /* Ensure the image itself doesn't have a border-radius that interferes */
-    object-fit: cover; /* Maintain aspect ratio and fill the container */
-}
-
-/* Buttons */
+/* --- Buttons --- */
 .banner-button, .btn {
     display: inline-block;
     background-color: #007bff;
@@ -129,12 +109,12 @@ p.subs {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Sections */
+/* --- Sections --- */
 section {
     padding: 80px 0;
 }
 
-/* Header & Navigation */
+/* --- Header & Navigation (Already good) --- */
 .main-top header {
     background-color: #fff;
     padding: 15px 0;
@@ -223,6 +203,7 @@ section {
     .mnu ul li a {
         padding: 15px 20px;
         display: block;
+        text-align: center; /* Center menu items on mobile */
     }
 
     .mnu .toggle {
@@ -237,9 +218,9 @@ section {
     }
 }
 
-/* Banner Section */
+/* --- Banner Section --- */
 .banner-bottom {
-    padding-top: 180px; /* To accommodate fixed header */
+    padding-top: 120px; /* To accommodate fixed header */
     padding-bottom: 80px;
     background: linear-gradient(to right, #e0f2f7, #f4f7f6);
     min-height: 100vh;
@@ -265,22 +246,26 @@ section {
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Spacing below image on small screens */
 }
 
+/* Profile Image Styling - ADJUSTED for square/rectangle */
 .advantage_left1 img {
-    border-radius: 50%;
+    /* Removed border-radius: 50%; for square/rectangle */
     width: 250px;
-    height: 250px;
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     border: 5px solid #007bff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    /* Optional: If you want slightly rounded corners, uncomment below and adjust value */
+    /* border-radius: 10px; */
 }
+
 
 .advantage-grid-info {
     flex: 0 0 100%;
     max-width: 100%;
-    text-align: center;
+    text-align: center; /* Keep text centered on smaller screens */
     padding: 0;
 }
 
@@ -288,42 +273,46 @@ section {
     font-size: 3.5em;
     margin-bottom: 20px;
     color: #2c3e50;
+    text-align: center; /* Ensure h1 is centered */
 }
 
 .advantage_left p {
     font-size: 1.1em;
     color: #555;
     max-width: 800px;
-    margin: 0 auto 30px auto;
-}
-.advantage_left {
-    /* ... existing styles ... */
-    margin-top: 0; /* Ensure no extra top margin */
-    padding-top: 0; /* Ensure no extra top padding */
+    margin: 0 auto 30px auto; /* Center paragraph and add bottom margin */
+    text-align: center; /* Ensure paragraphs are centered */
 }
 
-.waving {
-    height: 60px; /* Smaller wave icon */
+/* Removed the waving hand icon CSS as it's removed from HTML */
+/* .waving {
+    height: 60px;
     margin-bottom: 10px;
-}
+} */
 
-/* About, Certifications, and Experience Item Styling (Reused for consistency) */
-.aboutgrid_tp, .certigrid_tp, .newsgrid_tp {
+
+/* --- About, Certifications, and Experience Item Styling --- */
+/* This rule is crucial for centering the content blocks */
+.aboutgrid_tp,
+.certigrid_tp,
+.newsgrid_tp {
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    text-align: left;
+    text-align: left; /* Content within these blocks should align left */
     margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    /* New: Control max-width and center for content inside these blocks */
-    max-width: 900px; /* Adjust this value as needed, e.g., 800px, 900px */
+    /* This centers the blocks within their parent columns */
+    max-width: 900px; /* Limit width */
     margin-left: auto;
     margin-right: auto;
 }
 
-.aboutgrid_tp:hover, .certigrid_tp:hover, .newsgrid_tp:hover {
+.aboutgrid_tp:hover,
+.certigrid_tp:hover,
+.newsgrid_tp:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
@@ -332,6 +321,7 @@ section {
     list-style: none;
     padding-left: 0;
     margin-top: 20px;
+    text-align: left; /* Ensure lists stay left-aligned within their blocks */
 }
 
 .about_bt ul li, .cert_bt ul li, .news_bt ul li {
@@ -369,31 +359,35 @@ section {
     height: auto;
     margin-bottom: 20px;
     border-radius: 5px;
+    display: block; /* Ensure image is a block element to align with margin auto */
+    margin-left: auto; /* Center company logos */
+    margin-right: auto;
 }
 
-/* Skills Section */
+/* --- Skills Section --- */
 .agileits-services {
     background-color: #fff;
+    text-align: center; /* Ensure section content is centered */
 }
 
 .agileits-services-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* This will center the items if they don't fill the row */
+    justify-content: center; /* This is key for centering the skill cards */
     max-width: 1200px; /* Optional: if you want to limit the width of the row itself */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto; /* Center the entire row of skill cards */
+    padding: 20px 0; /* Add some vertical padding to the row */
 }
 
 .agileits-services-grids {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 10px;
-    margin: 20px; /* Keep margin for spacing between cards */
+    margin: 15px; /* Reduced margin slightly to potentially fit more */
     box-shadow: 0 3px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 0 calc(33.33% - 40px); /* This calculates space for 3 columns + margins */
-    max-width: calc(33.33% - 40px); /* Ensures cards don't get too wide */
+    flex: 0 0 calc(33.33% - 30px); /* Adjusted for 30px total margin (15px left + 15px right) */
+    max-width: calc(33.33% - 30px); /* Adjusted for 30px total margin */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -411,7 +405,7 @@ section {
     margin-bottom: 20px;
 }
 
-/* Contact Section */
+/* --- Contact Section --- */
 .wedo {
     background: #2c3e50; /* Darker background for contrast */
     color: #fff;
@@ -422,9 +416,18 @@ section {
     color: #fff;
 }
 
+/* Calendly Widget styling */
+.calendly-inline-widget {
+    margin: 50px auto; /* Center the widget */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 800px; /* Limit the width of the widget */
+}
+
 .contact_grid_right {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the contact form */
     padding: 40px;
     background-color: #fff;
     border-radius: 10px;
@@ -483,7 +486,7 @@ section {
     color: green; /* Default success color */
 }
 
-/* Footer */
+/* --- Footer --- */
 .cpy-right {
     margin-top: 60px;
     padding-top: 30px;
@@ -519,25 +522,37 @@ section {
     color: rgba(255,255,255,0.6);
 }
 
-/* Media Queries for responsiveness */
+/* --- Media Queries for Responsiveness --- */
 @media (min-width: 768px) {
     .advantage-grid-info1 {
         flex: 0 0 33.33%;
         max-width: 33.33%;
-        margin-bottom: 0;
+        margin-bottom: 0; /* Remove bottom margin on larger screens */
     }
     .advantage-grid-info {
         flex: 0 0 66.66%;
         max-width: 66.66%;
-        text-align: left;
+        text-align: left; /* Align text left on larger screens */
         padding-left: 40px;
     }
-    .advantage_left h1 {
-        font-size: 4.5em;
+    .advantage_left h1,
+    .advantage_left p {
+        text-align: left; /* Ensure text aligns left when col is wider */
     }
+
+    /* Buttons below About section, Certifications section, and Skills section */
+    /* Add text-align: center to the parent container of the buttons */
+    .about .container,
+    .cert .container,
+    .agileits-services .container,
+    .news .container,
+    .projects .container {
+        text-align: center; /* This will center the buttons at the bottom of these sections */
+    }
+
     .agileits-services-grids {
-        flex: 0 0 calc(33.33% - 40px); /* For 3 columns on large screens */
-        max-width: calc(33.33% - 40px);
+        flex: 0 0 calc(33.33% - 30px); /* For 3 columns on large screens */
+        max-width: calc(33.33% - 30px);
     }
     .contact_top .col-sm-6 {
         flex: 0 0 50%;
@@ -555,7 +570,6 @@ section {
 }
 
 @media (max-width: 767px) {
-    /* Existing mobile styles should largely remain */
     h1 {
         font-size: 2.5em;
     }
@@ -589,7 +603,7 @@ section {
         margin-left: 0;
     }
 
-    /* New: Ensure full width blocks are centered on small screens too */
+    /* Ensure full width blocks are centered on small screens too */
     .aboutgrid_tp,
     .certigrid_tp,
     .newsgrid_tp {

@@ -1,520 +1,1081 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
-	<title>Ravina Kalro</title>
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Exclusive Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+    <title>Ravina Kalro - Technical Program Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ravina Kalro's portfolio showcasing her experience as a Technical Program Manager in AI/ML driven products.">
+    <meta name="keywords" content="Ravina Kalro, Technical Program Manager, AI/ML, Amazon, Altran, Program Management, Software Delivery, UI/UX, Portfolio">
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- //Meta tag Keywords -->
-	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/font-awesome.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //Custom-Files -->
-	<!-- Web-Fonts -->
-	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-	<!-- //Web-Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Headings */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        h1 span {
+            color: #007bff; /* A vibrant blue for emphasis */
+        }
+
+        /* Buttons */
+        .banner-button, .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .banner-button:hover, .btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        /* Navigation */
+        .main-top header {
+            background-color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .mnu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mnu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .mnu ul li {
+            margin: 0 15px;
+        }
+
+        .mnu ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .mnu ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #007bff;
+            transition: width 0.3s ease;
+        }
+
+        .mnu ul li a:hover::after,
+        .mnu ul li.active a::after {
+            width: 100%;
+        }
+
+        .mnu .toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        #drop {
+            display: none;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 991px) {
+            .mnu ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 70px; /* Adjust based on header height */
+                left: 0;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            }
+
+            .mnu ul li {
+                margin: 0;
+                border-bottom: 1px solid #eee;
+            }
+
+            .mnu ul li:last-child {
+                border-bottom: none;
+            }
+
+            .mnu ul li a {
+                padding: 15px 20px;
+                display: block;
+            }
+
+            .mnu .toggle {
+                display: block;
+                text-align: right;
+                width: 100%;
+                padding-right: 20px;
+            }
+
+            #drop:checked + .menu {
+                display: flex;
+            }
+        }
+
+        /* Banner Section */
+        .banner-bottom {
+            padding-top: 120px; /* To accommodate fixed header */
+            padding-bottom: 80px;
+            background: linear-gradient(to right, #e0f2f7, #f4f7f6);
+        }
+
+        .inner-sec {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .middle-grids {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .advantage-grid-info1 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        
+        .advantage_left1 img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 5px solid #007bff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .advantage-grid-info {
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .advantage_left h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .advantage_left p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+        
+        .waving {
+            height: 60px; /* Smaller wave icon */
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        .about, .cert, .agileits-services, .news, .wedo {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about .heading, .cert .heading, .agileits-services .heading, .news .heading, .wedo .heading {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about .heading::after, .cert .heading::after, .agileits-services .heading::after, .news .heading::after, .wedo .heading::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #007bff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            border-radius: 2px;
+        }
+
+        .about p.subs, .agileits-services p.subs {
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-grids, .cert-grids, .news-grids {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .aboutgrid2, .certgrid2, .newsgrid1, .newsgrid2 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .aboutgrid_tp, .certigrid_tp, .newsgrid_tp {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .aboutgrid_tp:hover, .certigrid_tp:hover, .newsgrid_tp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .about_bt span, .cert_bt span, .news_bt span {
+            color: #555;
+            font-size: 1em;
+        }
+        
+        .about_bt ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about_bt ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .about_bt ul li::before {
+            content: "\f00c"; /* Font Awesome checkmark icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #007bff;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Certifications Section */
+        .cert {
+            background-color: #f0f8ff;
+        }
+
+        .cert_bt ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cert_bt ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .cert_bt ul li::before {
+            content: "\f00c"; /* Font Awesome checkmark icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #007bff;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Skills Section */
+        .agileits-services {
+            background-color: #fff;
+        }
+
+        .agileits-services-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .agileits-services-grids {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 0 0 calc(33% - 40px); /* Three columns with spacing */
+            max-width: calc(33% - 40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .agileits-services-grids:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .agileits-services-grids .fa {
+            font-size: 3.5em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .agileits-services-grids h4 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .agileits-services-grids p {
+            color: #666;
+            font-size: 0.95em;
+            text-align: center;
+        }
+
+        /* My Work (Professional Experience) Section */
+        .news {
+            background-color: #f0f8ff;
+        }
+
+        .newsgrid_tp img {
+            max-width: 150px; /* Smaller logos */
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .news_bt h4 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .news_bt h5 {
+            font-size: 1.2em;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .news_bt ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .news_bt ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .news_bt ul li::before {
+            content: "\f00c"; /* Font Awesome checkmark icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #007bff;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .news_bt ul li strong {
+            color: #333;
+        }
+
+        /* Academic Projects Section */
+        .projects .newsgrid_tp {
+            background-color: #fff;
+        }
+
+        .projects .news_bt h5 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .projects .news_bt p {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .wedo {
+            background: #2c3e50; /* Darker background for contrast */
+            color: #fff;
+        }
+
+        .wedo .heading {
+            color: #fff;
+        }
+
+        .contact_grid_right {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .contact_top input[type="text"],
+        .contact_top input[type="email"],
+        .contact_grid_right textarea {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+        }
+
+        .contact_grid_right textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .contact_grid_right input[type="submit"],
+        .contact_grid_right input[type="reset"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact_grid_right input[type="reset"] {
+            background-color: #6c757d;
+            margin-left: 15px;
+        }
+
+        .contact_grid_right input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .contact_grid_right input[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+
+        #my-form-status {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: green;
+        }
+
+        .cpy-right {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        .cpy-right .follow ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cpy-right .follow ul li {
+            margin: 0 10px;
+        }
+
+        .cpy-right .follow ul li a {
+            color: #fff;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .cpy-right .follow ul li a:hover {
+            color: #007bff;
+        }
+
+        .cpy-right p {
+            font-size: 0.9em;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (min-width: 768px) {
+            .advantage-grid-info1 {
+                flex: 0 0 33.33%;
+                max-width: 33.33%;
+            }
+            .advantage-grid-info {
+                flex: 0 0 66.66%;
+                max-width: 66.66%;
+                text-align: left;
+                padding-left: 40px;
+            }
+            .advantage_left h1 {
+                font-size: 4.5em;
+            }
+            .aboutgrid2, .certgrid2, .newsgrid1, .newsgrid2 {
+                flex: 0 0 80%;
+                max-width: 80%;
+            }
+            .agileits-services-grids {
+                flex: 0 0 calc(33% - 40px);
+                max-width: calc(33% - 40px);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .advantage_left h1 {
+                font-size: 2.8em;
+            }
+            .about, .cert, .agileits-services, .news, .wedo {
+                padding: 60px 0;
+            }
+            .about .heading, .cert .heading, .agileits-services .heading, .news .heading, .wedo .heading {
+                font-size: 2em;
+            }
+            .agileits-services-grids {
+                flex: 0 0 calc(80% - 40px); /* One column on small screens */
+                max-width: calc(80% - 40px);
+            }
+        }
+
+    </style>
 </head>
 <body>
-	<!-- header -->
-		<!-- navigation -->
-		<div class="main-top">
-		 <header>
-			<div class="container-fluid px-lg-5 ">
-				<nav class="mnu mx-auto">
-						  <label for="drop" class="toggle">Menu</label>
-							<input type="checkbox" id="drop">
-							<ul class="menu">
-								<li class="mr-lg-4 mr-3 active"><a href="#home" class="scroll">Home</a></li>
-								<li class="mr-lg-4 mr-3"><a href="#about" class="scroll">About Me</a></li>
-								<li class="mr-lg-4 mr-3"><a href="#certificate" class="scroll">Certifications</a></li>
-								<li class="mr-lg-4 mr-3"><a href="#services" class="scroll">Skills</a></li>
-								 <li class="mr-lg-4 mr-3"><a href="#work" class="scroll">My Work</a></li>
-								 <li class="mr-lg-4 mr-3"><a href="#projects" class="scroll">Academic Projects</a></li>
-								<li><a href="#contact" class="scroll">Contact</a></li>
-							</ul>
-						</nav>
-			</div>
-		</header>
-		</div>
-		<!-- //navigation-->
-
-	<section class="banner-bottom" id="home">
-		<div class="container">
+    <div class="main-top">
+        <header>
+            <div class="container-fluid px-lg-5">
+                <nav class="mnu mx-auto">
+                    <label for="drop" class="toggle"><i class="fa fa-bars"></i></label>
+                    <input type="checkbox" id="drop">
+                    <ul class="menu">
+                        <li class="mr-lg-4 mr-3 active"><a href="#home" class="scroll">Home</a></li>
+                        <li class="mr-lg-4 mr-3"><a href="#about" class="scroll">About Me</a></li>
+                        <li class="mr-lg-4 mr-3"><a href="#certificate" class="scroll">Certifications</a></li>
+                        <li class="mr-lg-4 mr-3"><a href="#services" class="scroll">Skills</a></li>
+                        <li class="mr-lg-4 mr-3"><a href="#work" class="scroll">Experience</a></li>
+                        <li class="mr-lg-4 mr-3"><a href="#projects" class="scroll">Projects</a></li>
+                        <li><a href="#contact" class="scroll">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <section class="banner-bottom" id="home">
+        <div class="container">
             <div class="inner-sec">
                 <div class="row middle-grids">
                     <div class="col-lg-4 advantage-grid-info1">
                         <div class="advantage_left1 text-center">
-                            <img src="images/profile Picture.jpg" class="img-fluid" alt="">
+                            <img src="images/profile Picture.jpg" class="img-fluid" alt="Ravina Kalro Profile Picture">
                         </div>
-                    </div> 
-					 <div class="col-lg-8 advantage-grid-info">
+                    </div>
+                    <div class="col-lg-8 advantage-grid-info">
                         <div class="advantage_left">
-                        <img class="waving" src="images/wainghand.png" height='100'>
-                             <h1 class="heading text-capitalize mb-sm-5 mb-4">Hi, I'm <span>Ravina Kalro.</span></h1>
-							<p class="mt-4">Over 6 years of experience in Information Technology with specific experience in Software Testing and Business Intelligence<br></br>
-								Results–driven Software/Hardware/Database Quality Assurance and Business Intelligence Professional with MS in Information Systems and proven track record in increasing productivity, quality, and customer satisfaction<br></br></p>
-								
-								<a href="#about" class="banner-button btn mt-5 scroll">About Me</a>		
-			
-						</div>
-						
-				
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="about text-center" id="about">
-		<div class="container">
-			 <h3 class="heading text-capitalize"> SUMMARY </h3>
-<!-- 		   <p class="subs mt-4">Proin ac fermentum est. Cras mi ipsum, consectetur.</p> -->
-			<div class="row about-grids mt-5">
-				<div class="col-lg-12 aboutgrid2">
-					<div class="aboutgrid_tp new_grd1">
-						
-						<div class="about_bt" style="text-align: left;">	
-					
-									<span style="text-align: left;color: #888"><b><b>EXPERTISE INCLUDES:</b></b><br></br>
-<b>-</b>Experience with QA Methodology and QA Validations to ensure the Quality Assurance Control<br></br>
-<b>-</b>Extensive experience and knowledge in writing Test Plans, Test Cases and Test Design Specification at all stages of the software development life cycle<br></br>
-<b>-</b>Have extensive experience in Black Box Testing. Performed Functional, Integration / System Testing, Regression Testing, Acceptance Testing, Unit, Usability Testing, etc<br></br>
-<b>-</b>Bug reporting through Bug tracking tools for Business Application Software & WEB Applications<br></br>
-<b>-</b>Implemented the Software Development Lifecycle (SDLC) for the testing life cycle to follow the Standards process in the application<br></br>
-<b>-</b>Experienced in requirement gathering, data preparation and data analysis<br></br>
-<b>-</b>Proficient in designing ER-Diagram for a proposed database, optimizing and normalizing the database<br></br>
-<b>-</b>Strong SQL knowledge on Queries to pull the necessary data to conduct actionable data analysis<br></br>
-<b>-</b>Experienced in implementing OLAP database for reporting<br></br>
-<b>-</b>Have extensive experience in BI tools like SSIS, SSRS, Talend and Tableau<br></br>
-<b>-</b>Highly proficient in data analysis using advanced features in Excel such as VBA codes and Macros<br></br>
-<b>-</b>Good working experience on creating ETL packages using SQL server Integration services (SSIS) and Azure Cloud<br></br>
-<b>-</b>Excellent communication skills, documentation skills, team problem solving ability, analytical skills in high speed, quality conscious, multitasked environment<br></br>
-<b>-</b>Self-motivated, strong organizational skills, reliable, capable to learn quickly new technical skills. I’m able to work under tight deadlines and rapidly changing priorities<br></br>
-									</span>
-								</div>
-							</div>
-						</div>
-						</div>
-						<br>
-						<br>
-						<a href="#certificate" class="banner-button btn">Certifications</a>
-						
-			</div>
-		</section>
-							
-
-	<section class="cert text-center" id="certificate">
-		<div class="container">
-			 <h3 class="heading text-capitalize"> Certifications </h3>
-<!-- 		   <p class="subs mt-4">Proin ac fermentum est. Cras mi ipsum, consectetur.</p> -->
-			<div class="row cert-grids mt-5">
-				<div class="col-lg-12 certgrid2">
-					<div class="certigrid_tp new_grd1">
-						<div class="cert_bt" style="text-align: left;">
-							<span style="text-align: left;color: #888"> •  BCS ISEB Business Analytics<br></br>
-								•  Microsoft Azure Fundamentals AZ-900<br></br>
-								•  Microsoft Azure Data Fundamentals DP-900<br></br>
-							</span>
-						</div>
-						<a href="#services" class="banner-button btn mt-5 scroll">Learn about what I do</a>
-					</div>
-				</div>
-			</div>	
-
-
-							
-            
-		</div>
+                            <img class="waving" src="images/wavinghand.png" alt="Waving Hand Icon">
+                            <h1 class="heading text-capitalize mb-sm-5 mb-4">Hi, I'm <span>Ravina Kalro.</span></h1>
+                            <p class="mt-4">Highly effective Technical Program Leader with 10+ years of progressive experience, including 2+ years at Amazon Fire TV, specializing in accelerating development and deployment of complex AI/ML-driven products and platforms. </p>
+                            <p>Proven track record in orchestrating cross-functional teams, leveraging data-informed insights to drive significant improvements in release cadence (30% throughput increase), reduce critical blockers (40% reduction), and ensure high-quality, on-time delivery (99%). </p>
+                            <a href="#about" class="banner-button btn mt-5 scroll">About Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-	<div class="agileits-services" id="services">
-		<div class="container">
-		   <h2 class="heading text-capitalize"> Primary Skills </h2>
-		   <p class="subs mt-4">Functional Skills: Requirements Analysis| Designing Requirement Matrix, Test Scenarios, Test cases & Execution | Status reports generation| User Storyboarding | Data Analysis| Product Management |</p>
-            <div class="agileits-services-row row pt-md-5 pb-5  text-center">
+
+    <section class="about text-center" id="about">
+        <div class="container">
+            <h3 class="heading text-capitalize"> Summary </h3>
+            <div class="row about-grids mt-5">
+                <div class="col-lg-12 aboutgrid2">
+                    <div class="aboutgrid_tp new_grd1">
+                        <div class="about_bt">
+                            <span style="color: #888"><b><b>EXPERTISE INCLUDES:</b></b><br>
+                                <ul>
+                                    <li>Accelerating development and deployment of complex AI/ML-driven products and platforms. </li>
+                                    <li>Orchestrating cross-functional teams and leveraging data-informed insights. </li>
+                                    <li>Driving significant improvements in release cadence (30% throughput increase) and reducing critical blockers (40% reduction). </li>
+                                    <li>Ensuring high-quality, on-time delivery (99%). </li>
+                                    <li>Translating cutting-edge AI research into scalable product solutions. </li>
+                                    <li>Optimizing engineering pipelines for advanced technologies. </li>
+                                    <li>Proven track record in software testing and business intelligence.</li>
+                                    <li>Extensive experience in writing Test Plans, Test Cases, and Test Design Specification.</li>
+                                    <li>Proficient in Black Box Testing, including Functional, Integration/System, Regression, Acceptance, Unit, and Usability Testing.</li>
+                                    <li>Bug reporting through Bug tracking tools for Business Application Software & WEB Applications.</li>
+                                    <li>Experienced in requirement gathering, data preparation, and data analysis.</li>
+                                    <li>Strong SQL knowledge for actionable data analysis.</li>
+                                    <li>Experienced in implementing OLAP database for reporting.</li>
+                                    <li>Proficient in BI tools like SSIS, SSRS, Talend, and Tableau.</li>
+                                    <li>Highly proficient in data analysis using advanced Excel features such as VBA codes and Macros.</li>
+                                    <li>Good working experience on creating ETL packages using SQL server Integration services (SSIS) and Azure Cloud.</li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <a href="#certificate" class="banner-button btn">Certifications</a>
+        </div>
+    </section>
+
+    <section class="cert text-center" id="certificate">
+        <div class="container">
+            <h3 class="heading text-capitalize"> Certifications </h3>
+            <div class="row cert-grids mt-5">
+                <div class="col-lg-12 certgrid2">
+                    <div class="certigrid_tp new_grd1">
+                        <div class="cert_bt">
+                            <ul>
+                                <li>AWS Cloud Practitioner </li>
+                                <li>Azure Fundamentals (AZ-900, DP-900) </li>
+                                <li>Certified Scrum Master (CSM) </li>
+                                <li>Project Management Professional (PMP) Amazon Internal </li>
+                                <li>Google Project Management Professional </li>
+                                <li>BCS Business Analysis </li>
+                                <li>AgentForce (Salesforce) </li>
+                            </ul>
+                        </div>
+                        <a href="#services" class="banner-button btn mt-5 scroll">Learn about what I do</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="agileits-services" id="services">
+        <div class="container">
+            <h2 class="heading text-capitalize"> Primary Skills </h2>
+            <p class="subs mt-4">Functional Skills: Requirements Analysis | Designing Requirement Matrix, Test Scenarios, Test cases & Execution | Status reports generation | User Storyboarding | Data Analysis | Product Management</p>
+            <div class="agileits-services-row row pt-md-5 pb-5 text-center">
                 <div class="col-lg-4">
                     <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                       <span class="fa fa-code"></span>
+                        <span class="fas fa-laptop-code"></span>
                         <h4 class="mt-4 mb-4">PROGRAMMING</h4>
-                        <p>SQL, R, Python, TSQL</p>
-                       
+                        <p>Python , SQL </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="agileits-services-grids mt-lg-0 mt-md-0 mt-5">
-                       <span class="fa fa-line-chart"></span>
-                        <h4 class="mt-4 mb-4">ANALYTICS</h4>
-                        <p>SSIS, SSAS, Talend, Toad Modular, Atlryx</p>
-                       
+                        <span class="fas fa-chart-line"></span>
+                        <h4 class="mt-4 mb-4">DATA & ML ADJACENT</h4>
+                        <p>Label QA , Model Feedback Loops , Evaluation Signals , A/B Frameworks , MLOps , Experiment Design for ML </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="agileits-services-grids">
-                       <span class="fa fa-cogs"></span>
-                       <h4 class="mt-4 mb-4">AUTOMATION</h4>
-                        <p>Selenium, TestingWhiz, Postman, QTP, JAWS, ZoomText</p>
+                        <span class="fas fa-cog"></span>
+                        <h4 class="mt-4 mb-4">AUTOMATION & TOOLING</h4>
+                        <p>Kibana , Jenkins , Selenium , Postman , Tableau , Power BI , TensorFlow </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="agileits-services-grids mt-lg-0 mt-5">
-                        <span class="fa fa-database"></span>
-                        <h4 class="mt-4 mb-4">DATABASE</h4>
-                        <p>MS SQL Server, Oracle 11g, PostgreSQL, MySQL, Azure, AWS Athena, Azure Blob</p>
+                        <span class="fas fa-server"></span>
+                        <h4 class="mt-4 mb-4">CLOUD & DEVOPS</h4>
+                        <p>AWS (IAM, S3, SageMaker, Boto3) , Azure , Docker , ETL Tools (Alteryx, Talend, SSIS) </p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="agileits-services-grids">
-                       <span class="fa fa-sliders"></span>
-                       <h4 class="mt-4 mb-4">BUSINESS INTELLIGENCE</h4>
-                        <p>Tableau, Microsoft PowerBI, Qlik Sense, Qlik View, SSRS, Advanced Excel</p>
+                        <span class="fas fa-project-diagram"></span>
+                        <h4 class="mt-4 mb-4">PROGRAM MANAGEMENT</h4>
+                        <p>Agile/Scrum , Stakeholder Alignment , OKRs , Roadmap Planning , Conflict mitigation , Executive Reviews , RACI Models , Sprint Planning , AI/ML Product Lifecycles , Experimentation Roadmapping </p>
                     </div>
                 </div>
-                
                 <div class="col-lg-4">
                     <div class="agileits-services-grids">
-                       <span class="fa fa-wrench"></span>
-                       <h4 class="mt-4 mb-4">SOFTWARE TOOLS</h4>
-                        <p>IntellieJ, Team Foundation Server, Eclipse,Jenkinks, Git, Soap UI, Netbeans, Google Cloud</p>
+                        <span class="fas fa-cloud"></span>
+                        <h4 class="mt-4 mb-4">INFRASTRUCTURE & PLATFORM</h4>
+                        <p>Distributed SDKs , OTA Systems , Firmware Readiness , Observability Pipelines </p>
                     </div>
                 </div>
             </div>
-<!-- 			<p class="subs mb-4">Proin ac fermentum est. Cras mi ipsum, consectetur?</p> -->
-			<a href="#work" class="banner-button btn">My recent work</a>
+            <a href="#work" class="banner-button btn">My Professional Experience</a>
+        </div>
     </div>
-	</div>
-	<!-- works -->
-	<section class="news text-center" id="work">
-		<div class="container">
-			 <h3 class="heading text-capitalize"> Employement History </h3>
-<!-- 		   <p class="subs mt-4">Proin ac fermentum est. Cras mi ipsum, consectetur.</p> -->
-			<div class="row news-grids mt-5">
-				<div class="col-lg-12 newsgrid2">
-					<div class="newsgrid_tp new_grd1">
-						<img src="images/Altran.png" alt="news image" class="img-fluid">
-						<div class="news_bt" style="text-align: left;">
-							<h4>ALTRAN</h4>
-							<p class="mt-6"> <b><u> Staff Test Engineer | Sep 2019 – Present | Burlington, MA</u></b></p>
-							<span style="text-align: left;color: #888"><b>-</b>	Designed and implemented test procedures, test cases, documentation validating performance, reliability, and robustness of product designs across subcomponent, subsystem, and system levels of At Home and Away from Home Keurig brewers and mobile apps<br></br>
-<b>-</b>	Authored, reviewed, and circulated test reports. Compared and interpreted results of tests against specifications and/or historical data<br></br>
-<b>-</b>	Supported the pipeline of dataflow into machine learning models based on gathered model results and new requirements<br></br>
-<b>-</b>	Extracted POD images from AWS bucket using boto3 and python, used MD5 checker and UUID scripts to verify image uniqueness on it<br></br>
-<b>-</b>	Applied data exploration techniques on extracted raw images by running image normalization, Binary model, and inference tool in Linux<br></br>
-<b>-</b>	Developed & maintained dashboards based on brewer logs, meta data and, MPA tool results to evaluate POD recognition models<br></br>
-<b>-</b>	Created optimized automation scripts for brewers using Postman, and python to perform regression tests thereby reducing manual effort<br></br>
-<b>-</b>	Supported connectivity team to debug various cloud functionalities such as file uploads, telemetry data upload, changing brewer language, error reporting and, downloading latest software build and model files on brewer from Azure IoT central via over the air (OTA)<br></br>
-<b>-</b>	Worked on Docker, participated in backend testing and helped developers to dig into root cause by tracking the logs and database<br></br>
-<b>-</b>	Pioneered Consumer Journey functionality for brewers<br></br>
-<b>-</b>	Responsible for Calibrating and measuring the Temperature, Time and Volume of the Brewers<br></br>
-</span>
-						</div>
-					</div>
-				</div>
-				</div>
-						<div class="col-lg-12 newsgrid1">
-							<div class="newsgrid_tp new_grd">
-								<img src="images/GraniteTelecommunications.png" alt="news image" class="img-fluid">
-									<div class="news_bt" style="text-align: left;">
-										<h4>GRANITE TELECOMMUNICATIONS</h4>
-										<h5><u>IT Intern | Aug 2018 – Dec 2018 | Quincy, MA </u></h5>
-										<span style="text-align: left;color: #888"><b>-</b>	Configured ETL pipeline to extract data from SQL Server and Oracle, load data on Hadoop cluster which increased extraction speed of customer details, tickets, inventory data by 20%<br></br>
-<b>-</b>	Analyzed customer behavior data to envision new insights leading to improved risk management & profitability helping to drive an 20% increase in business value & 12% increase in customer retention rate<br></br>
-<b>-</b>	Developed web-based dashboards using PowerBI for customer, ticket & inventory functioning to identify key performance metrics, MVCs, business levers to draw actionable insights<br></br>
-<b>-</b>	Conducted deployments on System Test and User Acceptance environments for database and app code changes<br></br>
-<b>-</b>	Enhanced marketing strategies by performing SWOT analysis & integrated analytical outcomes with CRM data. Developed web-based dashboard using Tableau to identify key performance metrics, MVCs, business levers to draw actionable insights<br></br>
-<b>-</b>	Worked with development team to design, develop, and enhance automation framework, utility classes using Selenium WebDriver, Maven & JUnit for functional, integration, user acceptance & performance testing of multiple applications<br></br>
-<b>-</b>	Researched on testing tools and implemented TestingWhiz for testing automation. Demoed it to entire IT department<br></br>
-<b>-</b>	Automated post-deployment validations using Jenkins & Selenium for Agile releases thus optimizing process by 15%<br></br>
-<b>-</b>	Implemented database changes and maintained all the documents related to Security Implementation Guide (STIG) for Government’s Enterprise Infrastructure Solutions (EIS) to upgrade cybersecurity standards<br></br>						
-</span>
-									</div>
-							</div>
-						</div>
-						<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<img src="images/neu.png" alt="news image" class="img-fluid">
-								<div class="news_bt" style="text-align: left;">
-									<h4>NORTHEASTERN UNIVERSITY</h4>
-									<p class="mt-6"> <b><u> Research Assistant | Jan 2018 – Aug 2018 | Boston, MA</u></b></p>
-									<span style="text-align: left;color: #888"><b>-</b>	Analyzed and processed large, complex data sets to meet functional and non-functional business requirements<br></br>
-<b>-</b>	Assisted in optimal extraction, transformation and loading of data from a wide variety of data sources using SQL, SSIS and other big data technologies<br></br>
-<b>-</b>Conducted workshops for data transformation and integration logic using Atlryx, Talend and SSIS<br></br>
-</span>
-										</div>
-							</div>
-						</div>
-						<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<img src="images/accenture.png" alt="news image" class="img-fluid">
-								<div class="news_bt" style="text-align: left;">
-									<h4>ACCENTURE</h4>
-									<p class="mt-6"> <b><u> Software Engineering Analyst | Sep 2014 – Aug 2017 | Mumbai, India</u></b></p>
-									<span style="text-align: left;color: #888"><b>-</b>	Worked with SMEs to identify & create new data model, data flow diagrams, data dictionaries and ETL source to target mapping to enforce best practices, data standards, data management policies across different functional areas of company<br></br>
-<b>-</b>	Functioned as liaison between client and off-shore teams by addressing all queries and guidance on data to be operated on during UAT phase by running queries in various database, and generated in detail reports for various Business Objects<br></br>
-<b>-</b>	Initiated research on automation tools & designed multiple automated test scripts in Selenium reducing rework by 5%<br></br>
-<b>-</b>	Eliminated 30% of UAT data issues by scripting & executing complex SQL queries to verify databases changes and ensure data integrity, accelerating performance of application by 15%<br></br>
-<b>-</b>	Analyzed requirements, developed & executed test cases, test scenarios for each Agile/Waterfall release<br></br>
-<b>-</b>	Crafted storyboard & mockups of user flow journey for customers to better determine their needs & optimize experience<br></br>
-<b>-</b>	Mentored juniors on automation framework & building customized PowerBI storyboards to identify insights for customers, participated in SCRUM meetings & maintained reports<br></br>
-<b>-</b>	Maintained reports related to Defect lifecycle and software development lifecycle<br></br>
-	</span>
-								</div>
-							</div>
-						</div>
-						</div>
-						<br>
-						<br>
-						<a href="#projects" class="banner-button btn">My academic projects</a>
-						
-			</div>
-		</section>
-		<!-- //works -->
-		<!-- projects -->
-	<section class="news text-center" id="projects">
-		<div class="container">
-			 <h3 class="heading text-capitalize"> Academic Projects </h3>
-<!-- 		   <p class="subs mt-4">Proin ac fermentum est. Cras mi ipsum, consectetur.</p> -->
-			<div class="row news-grids mt-5">
-			
-						<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Forex Trading using Machine Learning </h5>
-									<p class="mt-6">Data Analyst| May 2019 – Jun 2019</p>
-									<span style="text-align: left;color: #888"> •	Analyzed FOREX time-series data and implemented techniques like MACD, RSI to find Bull and Bear Markets<br> •	Forecasted future prices using Principal Component Analysis (PCA), Linear Regression Model and Bollinger Bands to formulate a trading strategy to maximize profit when traded in that time range
-										</span>
-										</div>
-										</div>
-										</div>
-										
-						<div class="col-lg-12 newsgrid1">
-							<div class="newsgrid_tp new_grd">
-									<div class="news_bt" style="text-align: left;">
-										<h5>Sentimental Analysis on MURA (musculoskeletal radiographs) dataset</h5>
-										<p class="mt-6">Data Analyst| March 2019 – Apr 2019</p>
-										<span style="text-align: left;color: #888"> •	Pre-processed data & performed sentiment analysis using tokenization, stemming, removing stop words, punctuations, numeric data<br> •  Created a classification model using Machine learning algorithm (NBC) having an accuracy of 85% and deployed on Google Cloud
-										</span>
-										</div>
-										</div>
-										</div>
-										<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Data Analysis for FIFA Athletes dataset</h5>
-									<p class="mt-6">Business Intelligence| Feb 2019 – Mar 2019</p>
-									<span style="text-align: left;color: #888"> •  Web scrapped FIFA athletics data & performed EDA to detect Team Playing strategies of various countries using R, Python<br> •  Generated insights showcasing major reasons of teams under-performing in global tournament using PowerBI & Tableau
-										</span>
-										</div>
-										</div>
-										</div>
-										
-													
-							<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Velero Project Management</h5>
-									<p class="mt-6">Data Governance| Feb 2019 – Apr 2019</p>
-									<span style="text-align: left;color: #888"> •  Revamped existing company’s system architecture to incorporate Big Data Systems & tools using data governance framework<br>
-									•  Identify improvement opportunities in the data governance team to streamline processes from data ingestion to consumption
-										</span>
-										</div>
-										</div>
-										</div>	
-										
-										<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Exploratory Data Analysis for EMS dataset</h5>
-									<p class="mt-6">Business Intelligence| Mar 2019 – Mar 2019</p>
-									<span style="text-align: left;color: #888"> •  Performed EDA for EMS dataset with the use of pandas & numpy python libraries that included pre-processing of data and certain data munging<br> • Generated graphical insights with the use of graphs making use of matplotlib and seaborn libraries thus finding relationship between different variables further helping in developing a predictive model<br> •  Performed data visualization to analyze performance of different EMS stations using interactive dashboards in Tableau, QlikSense and PowerBI
-										</span>
-										</div>
-										</div>
-										</div>
-										
-																				
-							<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>FitMe App</h5>
-									<p class="mt-6">UIUX Analyst| Mar 2019 – Apr 2019</p>
-									<span style="text-align: left;color: #888"> •  Designed an app to help users track their fitness routines<br>
-									•  Designed UI Screens, customer journey map flow, user stories & performed quantitative research techniques to observe user experiences including user interviews with 50+ users
-										</span>
-										</div>
-										</div>
-										</div>
-										
-										<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Language Helper</h5>
-									<p class="mt-6">UIUX Analyst| Jan 2019 – Feb 2019</p>
-									<span style="text-align: left;color: #888"> •  Constructed an App to help travelers learn survival phrases in local language <br>
-									•  Evaluated user interviews, drew user personas based on interviews, revised information architecture & instituted usability testing with 10 customers
-										</span>
-										</div>
-										</div>
-										</div>	
-											
-										
-							<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Business Analysis of Polaris application</h5>
-									<p class="mt-6">Business Analysis| Sep 2018 – Dec 2018</p>
-									<span style="text-align: left;color: #888"> • Led cross functional team to identified requirements, defining important KPI Metrics, MVP, product MRD & product roadmap specifying scrum planning, long-term & short-term goals to build prototype of university’s chatbot system<br> •  Created user stories of varied set of customers to understand & discover customer concerns & flag edge cases<br> •  Conducted user acceptance testing with more than 100 users of platform by wireframing landing page using Sketch
-										</span>
-										</div>
-										</div>
-										</div>		
-						<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Product Management of Amazon Teleportation Service</h5>
-									<p class="mt-6">Product Manager| Sep 2018 – Dec 2018</p>
-									<span style="text-align: left;color: #888"> •  Developed vision, strategy, business cases, requirement traceability matrix, user stories, press release document & financial models by performing extensive research on the market size & need for teleportation in this age<br> •  Planned various short- & long-term product roadmap for the entire product team by working with business stakeholders<br> •  Classified user research groups based on various factors for high-volume markets like Seattle, Boston & adjusted product roadmap upon feedback to improve feature usage for the most valuable user segment by 40%
-										</span>
-										</div>
-										</div>
-										</div>	
-										
-							<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Analysis of Indian Cricket Team</h5>
-									<p class="mt-6">Business Intelligence| Jun 2018 – Jun 2018</p>
-									<span style="text-align: left;color: #888"> •  Web scrapped Indian Cricket Team Data to develop Team Playing strategies in different tournaments<br>
-									• Accumulated 3 years’ worth data to identify how the Indian team has been overall performing when playing foreign opponents<br>
-									• Trends showcase the various premier leagues around the world, tend to help players perform better in these highly competitive tournaments such as World Cups, which has helped the team to secure higher position as they progressed through the competition
-										</span>
-										</div>
-										</div>
-										</div>	
-										
-							<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Retail Datawarehouse</h5>
-									<p class="mt-6">Data Warehouse Analyst| Mar 2018 – Apr 2018</p>
-									<span style="text-align: left;color: #888"> •  Developed a data warehouse by pipelining data from various SORs, integrated DSW using Talend Data Integration & SSIS<br>
-•  Devised and optimized parallel processes by 20% to run integrated jobs for around 48 million rows of data in 20 minutes<br>
-•  Designed interactive custom dashboards in Tableau, Power BI and QlikSense using DAX to prepare data driven analytics
-										</span>
-										</div>
-										</div>
-										</div>	
-										
-										
-						<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Chinook and Adventureworks Sample Database</h5>
-									<p class="mt-6">Data Analyst| Jan 2018 – Mar 2018</p>
-									<span style="text-align: left;color: #888"> •  Created the data model for Data Warehouse, source-to-target mapping as part of Data Profiling and data integration for Chinook and AdventureWorks sample database<br>
-•  Integrated data from various sources SQL Server, Postgres SQL, Flat files, Oracle, and MySQL using Talend Data Integration and SSIS, loading facts and dimensions<br>
-•  Performed and analyzed data visualization to build interactive dashboards in Tableau and Qlik sense to derive insights on business
-										</span>
-										</div>
-										</div>
-										</div>	
-										
-										
-					<div class="col-lg-12 newsgrid2">
-							<div class="newsgrid_tp new_grd1">
-								<div class="news_bt" style="text-align: left;">
-									<h5>Database Management for Tidal Energy Project</h5>
-									<p class="mt-6">Data Analyst| Aug 2017 – Dec 2017</p>
-									<span style="text-align: left;color: #888"> •  Designed & developed database for management of Tidal energy by using Toad and MYSQL<br>
-									•  Modelled relationships between entities, configured several triggers, views, stored procedures & error handling in the database to maintain data
-										</span>
-										</div>
-										</div>
-										</div>																
-										
-													
-										</div>
-										<br>
-										<br>
-										<a href="#contact" class="banner-button btn">Contact Information</a>
-										</div>
-										</section>
-<!-- projects -->
-										
-<!-- contact -->
-	 <section class="wedo" id="contact">
-		<div class="container">
-			<h3 class="heading text-capitalize text-white text-center"> Contact </h3>
-<!-- 		   <p class="subs mt-4 text-center">You can contact me.</p> -->
-			<div class="contact_grid_right mt-5 mx-auto text-center">
-				<form 
-					action="https://formspree.io/f/xoqyydbq"
-					method="post"
-				>
-					<div class="row contact_top">
-						<div class="col-sm-6">
-							<input type="text" name="Name" placeholder="Name" required="">
-						</div>
-						<div class="col-sm-6">
-							<input type="email" name="Email" placeholder="Email" required="">
-						</div>
-					</div>	
-						<!-- <input type="text" name="Name" placeholder="Name" required=""> -->
-						<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-						<input type="submit" value="Submit">
-						<input type="reset" value="Clear Form">
-						<div class="clearfix"> </div>
-				</form>
-				<script>
-					var form = document.getElementById("my-form");
-					
-					async function handleSubmit(event) {
-					  event.preventDefault();
-					  var status = document.getElementById("my-form-status");
-					  var data = new FormData(event.target);
-					  fetch(event.target.action, {
-						method: form.method,
-						body: data,
-						headers: {
-							'Accept': 'application/json'
-						}
-					  }).then(response => {
-						status.innerHTML = "Thanks for your submission!";
-						form.reset()
-					  }).catch(error => {
-						status.innerHTML = "Oops! There was a problem submitting your form"
-					  });
-					}
-					form.addEventListener("submit", handleSubmit)
-				</script>
-			</div>
-			<div class="cpy-right text-center">
-			<div class="follow">
-				<ul class="social_section_1info">
-					<!-- <li><a href="#"><span class="fa fa-facebook"></span></a></li> -->
-					<li><a href="https://www.github.com/ravinakalro"><span class="fa fa-github"></span></a></li>
-					<li><a href="https://www.linkedin.com/in/ravinakalro"><span class="fa fa-linkedin"></span></a></li>
-				</ul>
-			</div>
-				<p>© 2018 Exclusive. All rights reserved | Design by Me :).</a>
-				</p>
-			</div>
-		</div>
-	</section>
-	 <!-- //contact -->
+    <section class="news text-center" id="work">
+        <div class="container">
+            <h3 class="heading text-capitalize"> Professional Experience </h3>
+            <div class="row news-grids mt-5">
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <img src="images/amazon.png" alt="Amazon Logo" class="img-fluid">
+                        <div class="news_bt">
+                            <h4>AMAZON, Sunnyvale, CA</h4>
+                            <h5>Technical Program Manager | Oct 2022 - Present </h5>
+                            <ul>
+                                <li>Scaled SDK delivery from 4 to 8 annual releases across 200M+ global devices by redesigning release planning, automation, and test readiness workflows across 15+ engineering teams accelerating feature delivery by 3 days. </li>
+                                <li>Launched a global AI-driven feature (voice-to-image screensaver) across 200M+ legacy and NPI hardware by orchestrating execution across embedded, ML, platform, and legal teams-delivered to production with zero critical regressions. </li>
+                                <li>Improved system performance and reliability of Fire TV Launcher infrastructure, leading initiatives that reduced latency by 15% and boosted UI fluidity by 4%, directly impacting customer satisfaction on >100M daily active devices. </li>
+                                <li>Spearheaded complex firmware validation efforts across hardware and software stacks, deep-diving into cross-stack compatibility issues to proactively resolve critical regressions before large-scale OTA deployments. </li>
+                                <li>Built telemetry framework ingesting 300TB/month using Kibana and Python to trace SDK feature health across beta and production-reduced MTTR by 48 hours, enabling early detection of regressions and scaling incident response. </li>
+                                <li>Designed and operationalized a pre-launch A/B experimentation framework enabling controlled feature rollouts, test/control cohorting, and KPI-based go/no-go decisions-empowered data-driven launch planning and risk reduction. </li>
+                                <li>Led operational readiness for peak-viewership launches including Thursday Night Football, managing dry runs, release gates, and war rooms-ensured 99%+ availability with zero critical incidents across 200M+ deployed devices. </li>
+                                <li>Defined reusable onboarding playbooks for third-party SDK integrations-cut partner integration time by 20% by streamlining planning templates, escalation paths, and test acceptance criteria. </li>
+                                <li>Drove quarterly business reviews with VP+ stakeholders to align on ML product OKRs and roadmap tradeoffs-influenced reprioritization across 4+ domains to mitigate technical risk and improve delivery accuracy. </li>
+                                <li>Spearheaded test automation initiatives by developing Python-based regression frameworks, reducing manual QA efforts by 30% and increasing test coverage by 40%-improved release quality and accelerated feedback loops for ML-integrated features. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-</body>
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <img src="images/Altran.png" alt="Altran Logo" class="img-fluid">
+                        <div class="news_bt">
+                            <h4>ALTRAN, Burlington, MA</h4>
+                            <h5>Software Delivery Manager | Sep 2019 - Oct 2022 </h5>
+                            <ul>
+                                <li>Drove cross-functional program to improve vision model accuracy (200+ classes) by building automated image telemetry pipelines in Python (Azure/S3); enabled retraining cycles that lifted average accuracy to 90%+. </li>
+                                <li>Led post-deployment ML feedback loop across infra, labeling, and science teams-reduced misclassification by 15% and formalized quarterly model evaluation roadmap. </li>
+                                <li>Accelerated new product support by 25% by scaling ingestion systems for structured vision metadata across SKUs; enabled seamless integration with recognition pipeline and inference system. </li>
+                                <li>Spearheaded end-to-end automation for raw image ingestion and preprocessing (boto3, Python); enabled scalable model validation workflows across cloud and embedded systems for 2 global product launches. </li>
+                                <li>Owned full-stack QA and validation programs for embedded firmware and cloud services on NPI devices, ensuring stable multi-platform releases aligned with product launch timelines. </li>
+                                <li>Led a cross-functional program with hardware teams to mitigate camera fogging issues in smart brewers during back-to-back brewing cycles, ensuring clear image stream generation for optimal ML model performance. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <img src="images/GraniteTelecommunications.png" alt="Granite Telecommunications Logo" class="img-fluid">
+                        <div class="news_bt">
+                            <h4>GRANITE TELECOMMUNICATIONS, Quincy, MA</h4>
+                            <h5>Program Manager, Software Release - Intern | Aug 2018 - Dec 2018 </h5>
+                            <ul>
+                                <li>Accelerated software delivery timelines by 33% through automation of sanity tests using Selenium, eliminating bottlenecks. </li>
+                                <li>Configured Jenkins CI/CD pipeline for software and database deployment improving reliability across 11 applications. </li>
+                                <li>Built SQL-backed Power BI dashboards to monitor query latency and throughput across services, enabling 30% faster root-cause resolution and 12% boost in customer retention. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <img src="images/neu.png" alt="Northeastern University Logo" class="img-fluid">
+                        <div class="news_bt">
+                            <h4>NORTHEASTERN UNIVERSITY, Boston, MA</h4>
+                            <h5>Project Manager - Co-op | Sep 2014 - Aug 2017 </h5>
+                            <ul>
+                                <li>Delivered dashboards to track student metrics; reduced leadership reporting latency by 10%. </li>
+                                <li>Trained department staff on data transformation tools (Talend, SSIS, Alteryx); cut manual prep work by 15%. </li>
+                                <li>Deployed standard data flows to align reporting across programs; improved accuracy and coverage of KPIs. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <img src="images/accenture.png" alt="Accenture Logo" class="img-fluid">
+                        <div class="news_bt">
+                            <h4>ACCENTURE, Mumbai, India</h4>
+                            <h5>Software Engineering Analyst | Sep 2014 - Aug 2017 </h5>
+                            <ul>
+                                <li>Managed delivery of large-scale enterprise data projects with remote teams; maintained alignment across stakeholders in US, UK, and India. </li>
+                                <li>Supported architecture and delivery of reporting systems; built interactive dashboards to track ops and customer behavior. </li>
+                                <li>Led high-velocity sprint delivery across teams; improved sprint delivery by 20% and hit 99% adherence by fixing backlogs and flagging risks; trained 5+ engineers and built onboarding guides used across 3 teams. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <a href="#projects" class="banner-button btn">My Academic Projects</a>
+        </div>
+    </section>
+    <section class="news text-center" id="projects">
+        <div class="container">
+            <h3 class="heading text-capitalize"> Academic Projects </h3>
+            <div class="row news-grids mt-5">
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <div class="news_bt">
+                            <h5>Forex Trading using Machine Learning</h5>
+                            <p><strong>Role:</strong> Data Analyst | <strong>Duration:</strong> May 2019 – Jun 2019</p>
+                            <ul>
+                                <li>Analyzed FOREX time-series data and implemented techniques like MACD, RSI to find Bull and Bear Markets.</li>
+                                <li>Forecasted future prices using Principal Component Analysis (PCA), Linear Regression Model, and Bollinger Bands to formulate a trading strategy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <div class="news_bt">
+                            <h5>Sentimental Analysis on MURA (musculoskeletal radiographs) dataset</h5>
+                            <p><strong>Role:</strong> Data Analyst | <strong>Duration:</strong> March 2019 – Apr 2019</p>
+                            <ul>
+                                <li>Pre-processed data & performed sentiment analysis using tokenization, stemming, removing stop words, punctuations, numeric data.</li>
+                                <li>Created a classification model using Machine learning algorithm (NBC) having an accuracy of 85% and deployed on Google Cloud.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <div class="news_bt">
+                            <h5>Data Analysis for FIFA Athletes dataset</h5>
+                            <p><strong>Role:</strong> Business Intelligence | <strong>Duration:</strong> Feb 2019 – Mar 2019</p>
+                            <ul>
+                                <li>Web scrapped FIFA athletics data & performed EDA to detect Team Playing strategies of various countries using R, Python.</li>
+                                <li>Generated insights showcasing major reasons of teams under-performing in global tournament using PowerBI & Tableau.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <div class="news_bt">
+                            <h5>Velero Project Management</h5>
+                            <p><strong>Role:</strong> Data Governance | <strong>Duration:</strong> Feb 2019 – Apr 2019</p>
+                            <ul>
+                                <li>Revamped existing company’s system architecture to incorporate Big Data Systems & tools using data governance framework.</li>
+                                <li>Identified improvement opportunities in the data governance team to streamline processes from data ingestion to consumption.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <div class="news_bt">
+                            <h5>Exploratory Data Analysis for EMS dataset</h5>
+                            <p><strong>Role:</strong> Business Intelligence | <strong>Duration:</strong> Mar 2019 – Mar 2019</p>
+                            <ul>
+                                <li>Performed EDA for EMS dataset with the use of pandas & numpy python libraries that included pre-processing of data and certain data munging.</li>
+                                <li>Generated graphical insights with the use of graphs making use of matplotlib and seaborn libraries.</li>
+                                <li>Performed data visualization to analyze performance of different EMS stations using interactive dashboards in Tableau, QlikSense, and PowerBI.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <div class="news_bt">
+                            <h5>FitMe App</h5>
+                            <p><strong>Role:</strong> UI/UX Analyst | <strong>Duration:</strong> Mar 2019 – Apr 2019</p>
+                            <ul>
+                                <li>Designed an app to help users track their fitness routines.</li>
+                                <li>Designed UI Screens, customer journey map flow, user stories & performed quantitative research techniques to observe user experiences.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <div class="news_bt">
+                            <h5>Language Helper</h5>
+                            <p><strong>Role:</strong> UI/UX Analyst | <strong>Duration:</strong> Jan 2019 – Feb 2019</p>
+                            <ul>
+                                <li>Constructed an App to help travelers learn survival phrases in local language.</li>
+                                <li>Evaluated user interviews, drew user personas, revised information architecture & instituted usability testing.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <div class="news_bt">
+                            <h5>Business Analysis of Polaris application</h5>
+                            <p><strong>Role:</strong> Business Analysis | <strong>Duration:</strong> Sep 2018 – Dec 2018</p>
+                            <ul>
+                                <li>Led cross functional team to identified requirements, defining important KPI Metrics, MVP, product MRD & product roadmap.</li>
+                                <li>Created user stories of varied set of customers to understand & discover customer concerns & flag edge cases.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <div class="news_bt">
+                            <h5>Product Management of Amazon Teleportation Service</h5>
+                            <p><strong>Role:</strong> Product Manager | <strong>Duration:</strong> Sep 2018 – Dec 2018</p>
+                            <ul>
+                                <li>Developed vision, strategy, business cases, requirement traceability matrix, user stories, press release document & financial models.</li>
+                                <li>Planned various short- & long-term product roadmap for the entire product team.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <div class="news_bt">
+                            <h5>Analysis of Indian Cricket Team</h5>
+                            <p><strong>Role:</strong> Business Intelligence | <strong>Duration:</strong> Jun 2018 – Jun 2018</p>
+                            <ul>
+                                <li>Web scrapped Indian Cricket Team Data to develop Team Playing strategies in different tournaments.</li>
+                                <li>Accumulated 3 years’ worth data to identify how the Indian team has been overall performing when playing foreign opponents.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <div class="news_bt">
+                            <h5>Retail Datawarehouse</h5>
+                            <p><strong>Role:</strong> Data Warehouse Analyst | <strong>Duration:</strong> Mar 2018 – Apr 2018</p>
+                            <ul>
+                                <li>Developed a data warehouse by pipelining data from various SORs, integrated DSW using Talend Data Integration & SSIS.</li>
+                                <li>Devised and optimized parallel processes by 20% to run integrated jobs for around 48 million rows of data in 20 minutes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid1">
+                    <div class="newsgrid_tp new_grd">
+                        <div class="news_bt">
+                            <h5>Chinook and Adventureworks Sample Database</h5>
+                            <p><strong>Role:</strong> Data Analyst | <strong>Duration:</strong> Jan 2018 – Mar 2018</p>
+                            <ul>
+                                <li>Created the data model for Data Warehouse, source-to-target mapping as part of Data Profiling and data integration.</li>
+                                <li>Integrated data from various sources SQL Server, Postgres SQL, Flat files, Oracle, and MySQL using Talend Data Integration and SSIS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 newsgrid2">
+                    <div class="newsgrid_tp new_grd1">
+                        <div class="news_bt">
+                            <h5>Database Management for Tidal Energy Project</h5>
+                            <p><strong>Role:</strong> Data Analyst | <strong>Duration:</strong> Aug 2017 – Dec 2017</p>
+                            <ul>
+                                <li>Designed & developed database for management of Tidal energy by using Toad and MYSQL.</li>
+                                <li>Modelled relationships between entities, configured several triggers, views, stored procedures & error handling.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <a href="#contact" class="banner-button btn">Contact Information</a>
+        </div>
+    </section>
+    <section class="wedo" id="contact">
+        <div class="container">
+            <h3 class="heading text-capitalize text-white text-center"> Contact </h3>
+            <div class="contact_grid_right mt-5 mx-auto text-center">
+                <form action="https://formspree.io/f/xoqyydbq" method="post" id="my-form">
+                    <div class="row contact_top">
+                        <div class="col-sm-6">
+                            <input type="text" name="Name" placeholder="Name" required="">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" name="Email" placeholder="Email" required="">
+                        </div>
+                    </div>
+                    <textarea name="Message" placeholder="Message..." required=""></textarea>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear Form">
+                    <div class="clearfix"></div>
+                    <p id="my-form-status"></p>
+                </form>
+                <script>
+                    var form = document.getElementById("my-form");
+
+                    async function handleSubmit(event) {
+                        event.preventDefault();
+                        var status = document.getElementById("my-form-status");
+                        var data = new FormData(event.target);
+                        fetch(event.target.action, {
+                            method: form.method,
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        }).then(response => {
+                            if (response.ok) {
+                                status.innerHTML = "Thanks for your submission!";
+                                form.reset();
+                                status.style.color = "green";
+                            } else {
+                                response.json().then(data => {
+                                    if (Object.hasOwn(data, 'errors')) {
+                                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                                    } else {
+                                        status.innerHTML = "Oops! There was a problem submitting your form";
+                                    }
+                                }).catch(error => {
+                                    status.innerHTML = "Oops! There was a problem submitting your form";
+                                });
+                            }
+                        }).catch(error => {
+                            status.innerHTML = "Oops! There was a problem submitting your form";
+                        });
+                    }
+                    form.addEventListener("submit", handleSubmit);
+                </script>
+            </div>
+            <div class="cpy-right text-center">
+                <div class="follow">
+                    <ul class="social_section_1info">
+                        <li><a href="https://www.github.com/ravinakalro" target="_blank" aria-label="GitHub"><span class="fab fa-github"></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/ravinakalro" target="_blank" aria-label="LinkedIn"><span class="fab fa-linkedin"></span></a></li>
+                    </ul>
+                </div>
+                <p>© 2025 Ravina Kalro. All rights reserved | Design by Ravina Kalro.</p>
+            </div>
+        </div>
+    </section>
+    </body>
 </html>

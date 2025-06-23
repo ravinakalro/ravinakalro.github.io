@@ -7,14 +7,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/* Container for consistent spacing */
+/* Ensure the main container truly limits width and centers content */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Keep your max-width */
+    margin: 0 auto;    /* Ensure container itself is centered */
+    padding: 0 20px;   /* Add some internal padding */
 }
-
 /* Headings */
 h1, h2, h3, h4 {
     font-weight: 600;
@@ -85,6 +83,28 @@ p.subs {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+.profile-image-wrapper {
+    width: 260px; /* Slightly larger than the image to accommodate the border */
+    height: 260px; /* Adjust as needed */
+    margin: 0 auto 20px auto; /* Center the wrapper */
+    /* Add your desired border style here */
+    border: 5px solid #007bff;
+    /* Example of a slightly rounded border shape */
+    border-radius: 15px;
+    overflow: hidden; /* Clips the image to the wrapper's shape */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex; /* To center the image inside */
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio within the wrapper */
+    display: block; /* To avoid extra spacing below the image */
+    border-radius: 0; /* Ensure the image itself doesn't have a border-radius that interferes */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
 }
 
 /* Buttons */
@@ -296,6 +316,11 @@ section {
     text-align: left;
     margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* New: Control max-width and center for content inside these blocks */
+    max-width: 900px; /* Adjust this value as needed, e.g., 800px, 900px */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .aboutgrid_tp:hover, .certigrid_tp:hover, .newsgrid_tp:hover {
@@ -354,18 +379,21 @@ section {
 .agileits-services-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* This will center the items if they don't fill the row */
+    max-width: 1200px; /* Optional: if you want to limit the width of the row itself */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .agileits-services-grids {
     background-color: #f9f9f9;
     padding: 30px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px; /* Keep margin for spacing between cards */
     box-shadow: 0 3px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 0 0 calc(33% - 40px); /* Three columns with spacing */
-    max-width: calc(33% - 40px);
+    flex: 0 0 calc(33.33% - 40px); /* This calculates space for 3 columns + margins */
+    max-width: calc(33.33% - 40px); /* Ensures cards don't get too wide */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -507,15 +535,9 @@ section {
     .advantage_left h1 {
         font-size: 4.5em;
     }
-    .aboutgrid2, .certgrid2, .newsgrid1, .newsgrid2 {
-        flex: 0 0 80%;
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
     .agileits-services-grids {
-        flex: 0 0 calc(33% - 40px);
-        max-width: calc(33% - 40px);
+        flex: 0 0 calc(33.33% - 40px); /* For 3 columns on large screens */
+        max-width: calc(33.33% - 40px);
     }
     .contact_top .col-sm-6 {
         flex: 0 0 50%;
@@ -533,6 +555,7 @@ section {
 }
 
 @media (max-width: 767px) {
+    /* Existing mobile styles should largely remain */
     h1 {
         font-size: 2.5em;
     }
@@ -564,5 +587,15 @@ section {
     }
     .contact_grid_right input[type="reset"] {
         margin-left: 0;
+    }
+
+    /* New: Ensure full width blocks are centered on small screens too */
+    .aboutgrid_tp,
+    .certigrid_tp,
+    .newsgrid_tp {
+        padding: 20px; /* Slightly less padding on mobile */
+        margin-left: 15px; /* Add side margins for smaller screens */
+        margin-right: 15px;
+        max-width: calc(100% - 30px); /* Adjust max-width for mobile */
     }
 }

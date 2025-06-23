@@ -219,7 +219,7 @@ section {
 
 /* Banner Section */
 .banner-bottom {
-    padding-top: 120px; /* To accommodate fixed header */
+    padding-top: 180px; /* To accommodate fixed header */
     padding-bottom: 80px;
     background: linear-gradient(to right, #e0f2f7, #f4f7f6);
     min-height: 100vh;
@@ -275,6 +275,11 @@ section {
     color: #555;
     max-width: 800px;
     margin: 0 auto 30px auto;
+}
+.advantage_left {
+    /* ... existing styles ... */
+    margin-top: 0; /* Ensure no extra top margin */
+    padding-top: 0; /* Ensure no extra top padding */
 }
 
 .waving {
